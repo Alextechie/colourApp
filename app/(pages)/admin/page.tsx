@@ -1,7 +1,9 @@
+import { Data } from "@/components/AllData";
+
 export default function(){
     return (
         <div>
-            <p>This is the admin page</p>
+            <Data />
         </div>
     )
 }

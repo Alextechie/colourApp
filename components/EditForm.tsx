@@ -16,7 +16,7 @@ export function EditForm() {
                     <label htmlFor="secondary-color" className="text-gray-100">Secondary Colour</label>
                     <input type="text" placeholder="Enter the HexCode" className="rounded-md w-64 h-10 text-center" />
                     {/**Tertiary Colour */}
-                    <label htmlFor="tertiary-color" className="text-gray-100">Username</label>
+                    <label htmlFor="tertiary-color" className="text-gray-100">Tertiary Colour</label>
                     <input type="text" placeholder="Enter the HexCode" className="rounded-md w-64 h-10 text-center" />
                     {/**Role */}
                     <label htmlFor="role" className="text-gray-100">Role</label>

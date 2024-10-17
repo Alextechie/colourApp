@@ -23,16 +23,40 @@ model User {
 }
 
 model Edit {
-  id        Int      @id @default(autoincrement())
-  name      String
-  color     String
-  role      String
-  email     String
-  updatedAt DateTime
+  id             Int      @id @default(autoincrement())
+  name           String
+  primaryColor   String
+  secondaryColor String
+  tertiaryColor  String
+  role           Role
+  email          String
+  updatedAt      DateTime
 }
 
 model Country {
   id     Int    @id @default(autoincrement())
-  name   String
-  colour String
+  name   CountryName
+  colour Colours[]
+}
+
+model Colours {
+  id      Int    @id @default(autoincrement())
+  hexcode String
+  color   String
+  countryid Int
+  colour Country @relation(fields: [countryid], references: [id])
+}
+
+enum Role {
+  Admin
+  Student
+}
+
+enum CountryName {
+  KENYA
+  TANZANIA
+  UGANDA
+  RWANDA
+  SOUTHAFRICA
+  BURUDI
 }
